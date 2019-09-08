@@ -28,7 +28,7 @@ def format_response(weather):
 
 
 def get_weather(city):
-    weather_key = 'c592ef1677bf0d16c623437e789f87f4'
+    weather_key = ''  # Enter your API Key here
     url = 'https://api.openweathermap.org/data/2.5/weather'
     params = {'APPID': weather_key, 'q': city, 'units':'imperial'}
     response = requests.get(url, params=params)
@@ -36,8 +36,8 @@ def get_weather(city):
 
     label['text'] = format_response(weather)
 
-# c592ef1677bf0d16c623437e789f87f4
-# api.openweathermap.org/data/2.5/forecast?id={city ID}
+#
+# api.openweathermap.org/data/2.5/forecast?id={city ID} path for obtaining the API Key
 
 
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
@@ -65,5 +65,3 @@ label.place(relwidth=1, relheight=1)
 root.mainloop()
 
 # pyinstaller.exe --onefile --icon=sun_icon.ico weather.py
-
-#dragon2508 and naruto123 weatherapi password
